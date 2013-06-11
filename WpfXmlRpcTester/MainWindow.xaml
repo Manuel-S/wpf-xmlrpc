@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfXmlRpcTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="XmlRpc Tester" Height="410" Width="676.526" MinWidth="550" MinHeight="315">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="151*"/>
+            <RowDefinition Height="257*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="adresse" Height="23" Margin="112,10,10,0" TextWrapping="Wrap" Text="https://scc-ws-01.scc.kit.edu:8090/" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Service Adresse" VerticalAlignment="Top" Height="16" Width="82"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Credentials" VerticalAlignment="Top" Height="16" Width="63"/>
+        <TextBox x:Name="user" HorizontalAlignment="Left" Height="23" Margin="112,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passwort" HorizontalAlignment="Left" Height="23" Margin="251,38,0,0" VerticalAlignment="Top" Width="127" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="anfragecode" Margin="10,85,10,0" TextWrapping="Wrap" Text="UserInfo(&quot;ubit&quot;)" AcceptsReturn="True" PreviewKeyDown="anfragecode_PreviewKeyDown" VerticalScrollBarVisibility="Auto"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Anfrage Javascript" VerticalAlignment="Top" Height="16" Width="135"/>
+        <TextBox x:Name="anfragexml" Margin="10,85,10,0" TextWrapping="Wrap" Text="&lt;?xml version=&quot;1.0&quot;?&gt;&#xA;&lt;methodCall&gt;&#xA;&lt;methodName&gt;UserInfo&lt;/methodName&gt;&#xA;&lt;params&gt;&#xA;&lt;param&gt;&#xA;&lt;value&gt;&#xA;&lt;string&gt;ubit&lt;/string&gt;&#xA;&lt;/value&gt;&#xA;&lt;/param&gt;&#xA;&lt;/params&gt;&#xA;&lt;/methodCall&gt;" AcceptsReturn="True" Grid.Column="1" VerticalScrollBarVisibility="Visible" PreviewKeyDown="anfragexml_PreviewKeyDown"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Anfrage XML" VerticalAlignment="Top" RenderTransformOrigin="-0.728,0.501" Grid.Column="1" Height="16" Width="69"/>
+        <Button Content="Abschicken" Margin="0,5,10,0" HorizontalAlignment="Right" Width="75" Click="Button_Click_1" Grid.Column="1" Height="20" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button Content="Abschicken" Margin="0,5,10,0" Click="Button_Click_2" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox x:Name="antwort" Margin="10,30,10,10" TextWrapping="Wrap" Text="Antwort XML" IsReadOnly="True" VerticalScrollBarVisibility="Auto" IsUndoEnabled="False" Grid.Row="1"/>
+        <TextBox x:Name="jsonantwort" Margin="10,30,10,10" TextWrapping="WrapWithOverflow" Text="Antwort JSON" IsReadOnly="True" VerticalScrollBarVisibility="Auto" IsUndoEnabled="False" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" Grid.Column="1" Grid.Row="1" UseLayoutRounding="False"/>
+
+    </Grid>
+</Window>
