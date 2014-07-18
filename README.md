@@ -1,4 +1,5 @@
-Xml-Rpc Client
+Generic Xml-Rpc Client
+=============
 
 ![Screenshot](http://manuelschweigert.files.wordpress.com/2012/11/111512_1542_xmlrpcclien1.png?w=575)
 
